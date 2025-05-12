@@ -6,14 +6,22 @@ With this Retrieval-Augmented Generation (RAG) application, you can create chatb
 Examples:
 1. Ask questions about a large set of documents
 2. Create a customer support chatbot that helps customers by following a set of instructions.
-### Creating the RAG application
-The process for creating the app is as follows:
-1. Split your data into chunks of text (500 to 1000 words) to store your data more efficiently. This allows the retrieval process to capture pieces of information that are more relevant to the query, and the generation by the LLM (OpenAI model) to be more precise. It is also less costly, as only parts of a document will be included in the prompt, instead of the entire document collection.
-2. Create vector embeddings from the chunks and store them in a [Chroma database](https://www.trychroma.com/). Vector embeddings are numerical representations of terms, which can be words, sentences, or documents. These embeddings capture the relationships and similarities between the terms. In language models, this allows the model to understand the meaning and context of words based on their similarity to other words.
-3. Use the query input by the user to perform a similarity search and retrieve a set of relevant chunks from the database.
-4. The LLM (OpenAI model) uses the relevant chunks as context and sends a response along with its sources.
-### Example output:
-<img src="https://github.com/mlsmall/RAG-Application-with-LangChain/blob/main/output.png" width="1000" />
+
+### Steps to Build the Application:
+
+1. **Chunk the Data:**
+   Break the source documents into smaller segments (typically 500–1000 words) to enable more efficient storage and retrieval. This improves the relevance of retrieved information and enhances the LLM's response accuracy, while also reducing cost by limiting the prompt size to only the most relevant sections.
+
+2. **Generate and Store Embeddings:**
+   Convert each text chunk into vector embeddings—numerical representations that capture semantic meaning and relationships—using a language model. Store these embeddings in a **Chroma** vector database for efficient similarity-based retrieval.
+
+3. **Perform Similarity Search:**
+   When a user submits a query, use vector similarity search to retrieve the most relevant chunks from the database based on their semantic closeness to the query.
+
+4. **Generate the Response:**
+   The retrieved chunks are passed as context to the LLM (e.g., OpenAI model), which then generates a response grounded in the provided information and includes source references where applicable.
+
+
 
 ## Instructions
 ### Download the repository
