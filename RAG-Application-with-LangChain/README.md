@@ -25,7 +25,7 @@ Examples:
 
 ## Instructions
 ### Download the repository
-* Go to a terminal and paste `git clone [https://github.com/mlsmall/RAG-Application-with-LangChain.git](https://github.com/Rohith1-p/retrieval-augmented-generation.git)`
+* Go to a terminal and paste `(https://github.com/Rohith1-p/retrieval-augmented-generation.git)`
 
 ### OpenAI API Key
 Before you begin, set up an OpenAI account and generate a new key. You will need to put your credentials in a `.env` file.
